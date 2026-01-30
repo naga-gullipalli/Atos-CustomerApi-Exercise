@@ -7,8 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Implementations\" />
-    <Folder Include="Interfaces\" />
+    <ProjectReference Include="..\CustomerApi.Domain\CustomerApi.Domain.csproj" />
   </ItemGroup>
 
 </Project>
