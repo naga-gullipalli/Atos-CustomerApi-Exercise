@@ -1,5 +1,5 @@
 # Atos-CustomerApi-Exercise
-This Application crates Gat, Add and DeleteById Endpoints for Customer Api
+This Application crates Get, Add and DeleteById Endpoints for Customer Api
 
 ## Prerequisites
 Before setting up the project, ensure you have the following installed:
