@@ -13,7 +13,10 @@ builder.Services.AddLogging();
 builder.Services.AddOpenApi();
 
 builder.Services.AddEndpointsApiExplorer();    // Required for Swagger
-builder.Services.AddSwaggerGen();              // Swagger generator
+builder.Services.AddSwaggerGen(options =>      // Swagger generator
+{
+    options.EnableAnnotations();
+});              
 
 var app = builder.Build();
 

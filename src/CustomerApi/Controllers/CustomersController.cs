@@ -1,6 +1,7 @@
 ﻿using CustomerApi.Domain.Models;
 using CustomerApi.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace CustomerApi.Controllers
 {
@@ -35,6 +36,10 @@ namespace CustomerApi.Controllers
         }
 
         [HttpDelete("{id}")]
+        [SwaggerOperation(
+            OperationId = "Remove",
+            Tags = new[] { "Delete Customer By Id" }
+        )]
         public IActionResult Remove(int id)
         {
             if (id <= 0)
