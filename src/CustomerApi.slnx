@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="CustomerApi.Domain/CustomerApi.Domain.csproj" Id="5d1df7ec-5239-437a-ac98-80afcc3a8133" />
+  <Project Path="CustomerApi.Services/CustomerApi.Services.csproj" Id="8a80e950-ad52-434c-b291-3e4dc03b5e31" />
+  <Project Path="CustomerApi.Tests/CustomerApi.Tests.csproj" Id="c10ac3f3-201f-4bc6-ad95-0afa8d7c0ab4" />
+  <Project Path="CustomerApi/CustomerApi.csproj" />
+</Solution>
