@@ -1,6 +1,39 @@
-@CustomerApi_HostAddress = http://localhost:5015
+@CustomerApi_HostAddress = http://localhost:5015/api
 
-GET {{CustomerApi_HostAddress}}/weatherforecast/
+GET {{CustomerApi_HostAddress}}/customers
 Accept: application/json
+
+###
+
+
+POST {{CustomerApi_HostAddress}}/customers
+Content-Type: application/json
+{
+  "firstname":"Test 1",
+  "surname": "SurName Test 1"
+}
+
+###
+
+POST {{CustomerApi_HostAddress}}/customers
+Content-Type: application/json
+{
+  "firstname":"Test 2",
+  "surname": "SurName Test 2"
+}
+
+###
+
+
+POST {{CustomerApi_HostAddress}}/customers
+Content-Type: application/json
+{
+  "firstname":"Test 3",
+  "surname": "SurName Test 3"
+}
+
+###
+
+DELETE {{CustomerApi_HostAddress}}/customers/1
 
 ###

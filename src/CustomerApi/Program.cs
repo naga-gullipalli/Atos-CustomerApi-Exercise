@@ -1,10 +1,19 @@
+using CustomerApi.Services.Implementations;
+using CustomerApi.Services.Interfaces;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
+builder.Services.AddSingleton<ICustomerService, CustomerService>();
+builder.Services.AddLogging();
+
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
+
+builder.Services.AddEndpointsApiExplorer();    // Required for Swagger
+builder.Services.AddSwaggerGen();              // Swagger generator
 
 var app = builder.Build();
 
@@ -12,6 +21,8 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
+    app.UseSwagger();      // /swagger/v1/swagger.json
+    app.UseSwaggerUI();    // /swagger
 }
 
 app.UseAuthorization();
